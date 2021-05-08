@@ -1,7 +1,11 @@
 ﻿using Business.Concrete;
+using Business.Constants;
+using Core.Utilities.Results;
+using DataAccess.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using System;
+using System.Collections.Generic;
 
 namespace ConsoleUI
 {   //SOLID
@@ -11,10 +15,18 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ProductTest();
+           // ProductTest();
             //IoC
             //CategoryTest();
             //GetAllByCategoryIdTest();
+
+            //GetById(); //çalışmıyor
+
+        }
+
+        private static void GetById()
+        {
+      
 
         }
 

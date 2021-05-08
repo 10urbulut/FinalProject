@@ -39,11 +39,11 @@ namespace Business.Concrete
             //business codes
             // * yetkisi var mı ?
 
-            if (DateTime.Now.Hour==22)//22 ye kadar listelemeyi kapat
-            {
-                return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
-                //bakım zamanı
-            }
+            //if (DateTime.Now.Hour == 20)//22 ye kadar listelemeyi kapat
+            //{
+            //    return new ErrorDataResult<List<Product>>(Messages.MaintenanceTime);
+            //    //bakım zamanı
+            //}
 
             return new SuccessDataResult<List<Product>>( _productDal.GetAll(),Messages.ProductsListed);
         }
