@@ -20,16 +20,19 @@ namespace ConsoleUI
             //CategoryTest();
             //GetAllByCategoryIdTest();
 
-            //GetById(); //çalışmıyor
+            GetById(); //çalışmıyor
 
         }
 
         private static void GetById()
         {
-      
+            ProductManager productManager = new ProductManager(new EfProductDal());
+            var result = productManager.GetById(5);
 
+            Console.WriteLine(result.Data);
+            Console.WriteLine(productManager.GetById(5).Data);
         }
-
+      
         private static void GetAllByCategoryIdTest()
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
