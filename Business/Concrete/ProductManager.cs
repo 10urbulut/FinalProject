@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.AutoFac;
 using Business.CCS;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
@@ -28,6 +29,7 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
+       [SecuredOperation("admin,editör")]
         [ValidationAspect(typeof(ProductValidator))]//aspect:methodun başında sonunda çalışacağını karar verdiğimiz demek
         public IResult Add(Product product)
         {
