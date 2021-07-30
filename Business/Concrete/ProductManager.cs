@@ -32,7 +32,7 @@ namespace Business.Concrete
             _categoryService = categoryService;
         }
 
-        [SecuredOperation("product.add,admin")]
+      //  [SecuredOperation("product.add,admin")]
         [ValidationAspect(typeof(ProductValidator))]//aspect:methodun başında sonunda çalışacağını karar verdiğimiz demek
         [CacheRemoveAspect("IProductService.Get")]
         public IResult Add(Product product)
@@ -124,10 +124,7 @@ namespace Business.Concrete
             return new SuccessResult();
         }
 
-        [TransactionScopeAspect]
-        public IResult AddTransactionalTest(Product product)
-        {
-            throw new NotImplementedException();
-        }
+      
+       
     }
 }

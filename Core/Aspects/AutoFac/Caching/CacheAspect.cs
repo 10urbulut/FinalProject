@@ -13,12 +13,12 @@ namespace Core.Aspects.AutoFac.Caching
     public class CacheAspect : MethodInterception
     {
         private int _duration;
-        private ICacheManager _cacheManager;
+        private ICacheService _cacheManager;
 
         public CacheAspect(int duration = 60)
         {
             _duration = duration;
-            _cacheManager = ServiceTool.ServiceProvider.GetService<ICacheManager>();
+            _cacheManager = ServiceTool.ServiceProvider.GetService<ICacheService>();
         }
 
         //bellekte varsa cacheten getir yoksa veritabanından getir

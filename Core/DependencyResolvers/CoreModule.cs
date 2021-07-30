@@ -15,7 +15,7 @@ namespace Core.DependencyResolvers
         {
             serviceCollection.AddMemoryCache();// otomatik injection yapıyor, memory caching karşılığı artık var
             serviceCollection.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            serviceCollection.AddSingleton<ICacheManager, MemoryCacheManager>();
+            serviceCollection.AddSingleton<ICacheService, MemoryCacheManager>();
         }
     }
 }

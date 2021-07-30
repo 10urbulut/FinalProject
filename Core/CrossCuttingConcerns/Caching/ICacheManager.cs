@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.CrossCuttingConcerns.Caching
 {
-   public interface ICacheManager
+   public interface ICacheService
     {
         T Get<T>(string key);
         object Get(string key);

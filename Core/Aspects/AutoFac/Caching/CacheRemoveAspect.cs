@@ -9,12 +9,12 @@ namespace Core.Aspects.AutoFac.Caching
     public class CacheRemoveAspect : MethodInterception
     {
         private string _pattern;
-        private ICacheManager _cacheManager;
+        private ICacheService _cacheManager;
 
         public CacheRemoveAspect(string pattern)
         {
             _pattern = pattern;
-            _cacheManager = ServiceTool.ServiceProvider.GetService<ICacheManager>();
+            _cacheManager = ServiceTool.ServiceProvider.GetService<ICacheService>();
         }
 
         protected override void OnSuccess(IInvocation invocation)

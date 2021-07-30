@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace Core.CrossCuttingConcerns.Caching.Microsotf
 {
-    public class MemoryCacheManager : ICacheManager
+    public class MemoryCacheManager : ICacheService
     {
         //Adapter pattern
         IMemoryCache _memorycahce;
